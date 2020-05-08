@@ -1,0 +1,72 @@
+
+
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0;
+
+	font-family: sans-serif;
+}
+
+.shadow-stuff {
+	-webkit-box-shadow: inset 0 0 6pc hsla(0, 0%, 0%, 0.4);
+	-moz-box-shadow: inset 0 0 6pc hsla(0, 0%, 0%, 0.4);
+	-ms-box-shadow: inset 0 0 6pc hsla(0, 0%, 0%, 0.4);
+	-o-box-shadow: inset 0 0 6pc hsla(0, 0%, 0%, 0.4);
+	box-shadow: inset 0 0 7pc hsla(0, 0%, 0%, 0.4);
+
+	-webkit-animation: fade-in 0.5s;
+	-moz-animation: fade-in 0.5s;
+	-ms-animation: fade-in 0.5s;
+	-o-animation: fade-in 0.5s;
+	animation: fade-in 0.5s;
+}
+@keyframes fade-in {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.main {
+	height: 100%;
+
+	position: relative;
+	max-width: 50pc;
+	margin: 0 auto;
+
+	padding: 3pc;
+	box-sizing: border-box;
+}
+
+.message {
+	color: #888;
+	line-height: 1.5;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+}
+
+nav {
+	position: absolute;
+	bottom: 2rem;
+	right: 2rem;
+
+	height: 3rem;
+}
+
+.logo {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+
+	height: 100%;
+	cursor: default;
+	user-select: none;
+	-webkit-user-select: none;
+
+	color: hsla(0, 0%, 0%, 0.4);
+}
