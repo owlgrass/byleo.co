@@ -62,6 +62,7 @@ class ColorChart {
 		$cells.forEach(($cell, i) => {
 			$cell.style.width = '6px'
 			$cell.style.height = '6px'
+			$cell.style.transition = 'background 0.2s'
 		})
 
 		this.$el = $table
@@ -100,7 +101,7 @@ let cc = new ColorChart(14, 7)
 document.querySelector('nav').prepend(cc.$el)
 
 // Cycle through different lighness for color chart when it's clicked
-let optionsForPresetL = [35, 50, 75]
+let optionsForPresetL = [35, 50, 75, 85]
 let i = 0
 cc.$el.addEventListener('click', e => {
 	let o = optionsForPresetL[i++ % optionsForPresetL.length]
