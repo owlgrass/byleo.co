@@ -84,6 +84,7 @@ class ColorChart {
 
 const presetL = []
 presetL[25] = { L: 25, C: 19 }
+presetL[35] = { L: 35, C: 27 }
 presetL[50] = { L: 50, C: 39 }
 presetL[75] = { L: 75, C: 59 }
 presetL[85] = { L: 85, C: 34 }
@@ -95,23 +96,13 @@ presetL[99] = { L: 99, C: 2 }
 
 
 // Create color chart
-let cc = new ColorChart(20, 5)
+let cc = new ColorChart(14, 7)
 document.querySelector('nav').prepend(cc.$el)
 
 // Cycle through different lighness for color chart when it's clicked
-let optionsForPresetL = [25, 50, 75]
+let optionsForPresetL = [35, 50, 75]
 let i = 0
 cc.$el.addEventListener('click', e => {
 	let o = optionsForPresetL[i++ % optionsForPresetL.length]
 	cc.render(presetL[o])
 })
-
-
-// document.querySelector('nav').addEventListener('click', e => {
-// 	let $el = e.target
-
-// 	let $old = document.querySelector('nav table.color-chart')
-// 	if ($old)
-
-// 	$el.prepend(createColorChart(20, 5, { L: 85, C: presetL[85]}))
-// })
